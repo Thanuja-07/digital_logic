@@ -1,6 +1,6 @@
 import { type GateType } from "@/lib/gateLogic";
 
-const GATES: GateType[] = ["AND", "OR", "NOT", "NAND", "NOR", "XOR"];
+const GATES: GateType[] = ["AND", "OR", "NOT", "NAND", "NOR", "XOR", "XNOR"];
 
 interface GateSelectorProps {
   selected: GateType;

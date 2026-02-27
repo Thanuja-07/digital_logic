@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { type GateType, evaluateGate } from "@/lib/gateLogic";
 
-const allGates: GateType[] = ["AND", "OR", "NOT", "NAND", "NOR", "XOR"];
+const allGates: GateType[] = ["AND", "OR", "NOT", "NAND", "NOR", "XOR", "XNOR"];
 
 function randomQuestion() {
   const gate = allGates[Math.floor(Math.random() * allGates.length)];
@@ -93,7 +93,7 @@ const Practice = () => {
         </section>
 
         <footer className="text-center text-xs text-muted-foreground mt-10 pb-4">
-          <p>Questions are generated randomly from all 6 gate types.</p>
+          <p>Questions are generated randomly from all 7 gate types.</p>
         </footer>
       </div>
     </div>

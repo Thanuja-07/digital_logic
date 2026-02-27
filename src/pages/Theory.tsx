@@ -7,6 +7,7 @@ const gateDetails: Record<GateType, { symbol: string; expression: string; explan
   NAND: { symbol: "⌐(A · B)", expression: "Y = NOT(A AND B)", explanation: "The NAND gate is the complement of AND. It outputs 0 only when both inputs are 1. NAND is a universal gate — any circuit can be built using only NAND gates." },
   NOR:  { symbol: "⌐(A + B)", expression: "Y = NOT(A OR B)", explanation: "The NOR gate is the complement of OR. It outputs 1 only when both inputs are 0. Like NAND, NOR is also a universal gate." },
   XOR:  { symbol: "A ⊕ B", expression: "Y = A XOR B", explanation: "The XOR (exclusive OR) gate outputs 1 when the inputs are different. It's widely used in arithmetic circuits like adders and parity checkers." },
+  XNOR: { symbol: "A ⊙ B", expression: "Y = NOT(A XOR B)", explanation: "The XNOR (exclusive NOR) gate outputs 1 when both inputs are the same. It's the complement of XOR and is used in equality comparators." },
 };
 
 const Theory = () => (
