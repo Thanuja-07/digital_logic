@@ -4,10 +4,10 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { to: "/", label: "Simulator" },
+  { to: "/", label: "Home" },
+  { to: "/simulator", label: "Simulator" },
   { to: "/theory", label: "Theory" },
   { to: "/practice", label: "Practice" },
-  { to: "/about", label: "About" },
 ];
 
 const Navbar = () => {
