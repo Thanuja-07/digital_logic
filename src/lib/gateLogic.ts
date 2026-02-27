@@ -6,7 +6,7 @@
  * Output: binary result (0 or 1)
  */
 
-export type GateType = "AND" | "OR" | "NOT" | "NAND" | "NOR" | "XOR";
+export type GateType = "AND" | "OR" | "NOT" | "NAND" | "NOR" | "XOR" | "XNOR";
 
 /** AND gate: output is 1 only when both inputs are 1 */
 export function andGate(a: number, b: number): number {
@@ -38,6 +38,11 @@ export function xorGate(a: number, b: number): number {
   return a ^ b;
 }
 
+/** XNOR gate: output is 1 when inputs are the same */
+export function xnorGate(a: number, b: number): number {
+  return (a ^ b) === 1 ? 0 : 1;
+}
+
 /** Evaluates the selected gate with given inputs */
 export function evaluateGate(gate: GateType, a: number, b: number): number {
   switch (gate) {
@@ -47,6 +52,7 @@ export function evaluateGate(gate: GateType, a: number, b: number): number {
     case "NAND": return nandGate(a, b);
     case "NOR":  return norGate(a, b);
     case "XOR":  return xorGate(a, b);
+    case "XNOR": return xnorGate(a, b);
   }
 }
 
@@ -74,4 +80,5 @@ export const gateDescriptions: Record<GateType, string> = {
   NAND: "Inverted AND — output is 0 only when both are 1",
   NOR:  "Inverted OR — output is 1 only when both are 0",
   XOR:  "Output is 1 when inputs are DIFFERENT",
+  XNOR: "Output is 1 when inputs are the SAME",
 };
